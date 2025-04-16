@@ -33,6 +33,8 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     // OpenFeign - для создания HTTP клиентов и вызова других микросервисов
     implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
+    // Lombok - аннотации
+    implementation("org.projectlombok:lombok:1.18.38")
     // H2 Database - встроенная база данных для разработки
     runtimeOnly("com.h2database:h2")
     // Spring Test - для тестирования
