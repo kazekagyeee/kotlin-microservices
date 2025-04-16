@@ -33,6 +33,8 @@ dependencies {
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     // Spring Kafka - для работы с Apache Kafka (асинхронная коммуникация)
     implementation("org.springframework.kafka:spring-kafka")
+    // Lombok - аннотации
+    implementation("org.projectlombok:lombok:1.18.38")
     // H2 Database - встроенная база данных для разработки
     runtimeOnly("com.h2database:h2")
     // Spring Test - для тестирования
