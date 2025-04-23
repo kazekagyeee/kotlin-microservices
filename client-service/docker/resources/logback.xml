@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- profile: docker -->
+<configuration debug="false">
+
+    <!-- Свойства -->
+    <property name="pattern" value="%d{dd.MM.yyy HH:mm:ss.SSS} %-5level %-50.50logger{50} : %msg [%method:%line]%n" />
+    <property name="filename" value="iisid-api" />
+    <property name="extension" value="log" />
+    <property name="path" value="/tmp/logs/" />
+
+    <!-- Вывод в поток out -->
+    <appender name="CONSOLE-OUT" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <encoder>
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Вывод в файл -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${path}${filename}.${extension}</file>
+        <append>true</append>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${path}${filename}_%d{yyyy-MM-dd}.${extension}</fileNamePattern>
+
+            <!-- За сколько дней хранить историю-->
+            <maxHistory>2</maxHistory>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>${pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE-OUT"/>
+        <appender-ref ref="FILE"/>
+    </root>
+
+    <logger name="iisid" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE-OUT"/>
+        <!--<appender-ref ref="FILE"/>-->
+    </logger>
+
+</configuration>
