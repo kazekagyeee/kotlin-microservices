@@ -8,4 +8,4 @@ class NotificationServiceApplication
 
 fun main(args: Array<String>) {
     runApplication<NotificationServiceApplication>(*args)
-} 
+}

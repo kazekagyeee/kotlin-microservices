@@ -4,7 +4,3 @@ server:
 spring:
   application:
     name: product-service
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    hibernate:
-      ddl-auto: update

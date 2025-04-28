@@ -51,7 +51,3 @@ tasks.withType<Test> {
 tasks.withType<org.springframework.boot.gradle.tasks.bundling.BootJar> {
     archiveFileName.set("order-service.jar")
 }
-
-tasks.register<Wrapper>("wrapper") {
-    gradleVersion = "8.12"
-}
