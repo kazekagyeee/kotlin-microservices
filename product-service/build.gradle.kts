@@ -23,8 +23,6 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
     // Spring Web - для создания REST API и веб-приложений
     implementation("org.springframework.boot:spring-boot-starter-web")
-    // Spring Data JPA - для работы с базами данных через JPA
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     // Jackson Module Kotlin - для сериализации/десериализации JSON в Kotlin
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     // Kotlin Reflect - для рефлексии в Kotlin
