@@ -25,3 +25,7 @@ replay_pid*
 
 # Kotlin Gradle plugin data, see https://kotlinlang.org/docs/whatsnew20.html#new-directory-for-kotlin-data-in-gradle-projects
 .kotlin/
+.gradle/8.8/fileHashes/fileHashes.lock
+.idea/jarRepositories.xml
+.idea/kotlinc.xml
+.gradle/8.8/fileHashes/fileHashes.lock
