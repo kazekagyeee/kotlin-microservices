@@ -1,8 +1,8 @@
 rootProject.name = "kotlin-microservices"
 
 include(
-    "product-service",
-    "order-service",
-    "notification-service",
+    "first-service",
+    "second-service",
+    "third-service",
     "client-service"
 ) 
