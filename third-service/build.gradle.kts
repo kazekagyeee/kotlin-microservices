@@ -44,5 +44,5 @@ tasks.withType<Test> {
 }
 
 tasks.withType<org.springframework.boot.gradle.tasks.bundling.BootJar> {
-    archiveFileName.set("product-service.jar")
+    archiveFileName.set("third-service.jar")
 }
