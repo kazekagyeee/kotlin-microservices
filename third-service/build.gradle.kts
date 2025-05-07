@@ -29,6 +29,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     // Spring Actuator - для мониторинга и управления приложением
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    // Spring Kafka - для работы с Apache Kafka (асинхронная коммуникация)
+    implementation("org.springframework.kafka:spring-kafka")
+    implementation("org.apache.kafka:kafka-clients:3.7.0")
     // Spring Test - для тестирования
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
