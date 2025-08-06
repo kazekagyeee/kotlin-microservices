@@ -1,15 +1,17 @@
 package com.kazekagyee.clientservice.domain.service
 
 import org.springframework.stereotype.Service
-import org.springframework.web.reactive.function.client.WebClient
+import org.springframework.web.client.RestTemplate
 
 @Service
 class ClientService(
-    private val webClient : WebClient
+    private val restTemplate: RestTemplate
 ) {
 
     fun startSequence(n: Int) {
-        webClient.get()
-            .uri("/first-service/$n")
+        restTemplate.getForObject(
+            "http://localhost:8083/first-service/$n",
+            Void::class.java
+        )
     }
 }

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 class ThirdServiceController(private val service: ThirdService) {
 
     @GetMapping("/{n}")
-    fun processN(@PathVariable n: Int): Int {
-        return service.processN(n)
+    fun processN(@PathVariable n: Int) {
+        service.processN(n)
     }
 }

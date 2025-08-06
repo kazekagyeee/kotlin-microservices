@@ -10,9 +10,10 @@ class FirstService(
 
     fun processN(n: Int) {
         if (n == 0) {
-            //todo
+            println("Cycle stopped in first service")
+            return
         }
         val nextN = n - 1
-        kafkaEventProducer.sendEvent("first", nextN.toString())
+        kafkaEventProducer.sendEvent("second", nextN.toString())
     }
 }

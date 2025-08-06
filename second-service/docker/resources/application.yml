@@ -1,6 +1,26 @@
 server:
   port: 8082
+  servlet:
+    context-path: /
 
 spring:
   application:
-    name: second-service 
+    name: second-service
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: ${spring.application.name}-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+my:
+  kafka:
+    topic:
+      second:
+        name: second
+        partitions: 3
+        replicas: 1

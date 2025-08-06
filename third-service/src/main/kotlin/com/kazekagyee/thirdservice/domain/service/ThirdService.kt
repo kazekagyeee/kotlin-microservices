@@ -1,14 +1,19 @@
 package com.kazekagyee.thirdservice.domain.service
 
+import com.kazekagyee.thirdservice.kafka.KafkaEventProducer
 import org.springframework.stereotype.Service
 
 @Service
-class ThirdService {
+class ThirdService(
+    private val kafkaEventProducer: KafkaEventProducer
+) {
 
-    fun processN(n: Int): Int {
+    fun processN(n: Int) {
         if (n == 0) {
-            //todo
+            println("Cycle stopped in second service")
+            return
         }
-        return n - 1
+        val nextN = n - 1
+        kafkaEventProducer.sendEvent("first", nextN.toString())
     }
 }

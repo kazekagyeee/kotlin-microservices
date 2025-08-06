@@ -14,7 +14,7 @@ RUN useradd -m appuser && chown -R appuser:appuser /app
 USER appuser
 
 # Expose the application port
-EXPOSE 8080
+EXPOSE 8099
 
 # Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]

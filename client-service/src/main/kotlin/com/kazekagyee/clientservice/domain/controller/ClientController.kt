@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController
 class ClientController(
     private val clientService: ClientService
 ) {
-
     @GetMapping("/start-sequence/{n}")
     fun startSequence(@PathVariable n : Int) {
         clientService.startSequence(n)

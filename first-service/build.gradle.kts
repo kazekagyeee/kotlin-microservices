@@ -1,9 +1,9 @@
 plugins {
+    //must-have for spring-kafka + kotlin
+    id("org.jetbrains.kotlin.plugin.spring") version "1.9.22"
     id("org.springframework.boot") version "3.2.3"
     id("io.spring.dependency-management") version "1.1.4"
     kotlin("jvm") version "1.9.22"
-    kotlin("plugin.spring") version "1.9.22"
-    kotlin("plugin.jpa") version "1.9.22"
 }
 
 group = "com.kazekagyee"
@@ -20,7 +20,6 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
     // Spring Web - для создания REST API и веб-приложений
     implementation("org.springframework.boot:spring-boot-starter-web")
     // Jackson Module Kotlin - для сериализации/десериализации JSON в Kotlin
