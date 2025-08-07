@@ -4,11 +4,11 @@ plugins {
     // Spring dependency management plugin for managing Spring dependencies
     id("io.spring.dependency-management") version "1.1.4" apply false
     // Kotlin JVM plugin for Kotlin support
-    kotlin("jvm") version "1.9.22" apply false
+    kotlin("jvm") version "1.9.25" apply false
     // Kotlin Spring plugin for Spring support in Kotlin
-    kotlin("plugin.spring") version "1.9.22" apply false
+    kotlin("plugin.spring") version "1.9.25" apply false
     // Kotlin JPA plugin for JPA support in Kotlin
-    kotlin("plugin.jpa") version "1.9.22" apply false
+    kotlin("plugin.jpa") version "1.9.25" apply false
 }
 
 allprojects {
@@ -17,6 +17,8 @@ allprojects {
 
     repositories {
         mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+        maven { url = uri("https://repo.spring.io/milestone") }
     }
 }
 

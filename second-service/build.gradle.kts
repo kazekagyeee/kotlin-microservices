@@ -1,9 +1,9 @@
 plugins {
     //must-have for spring-kafka + kotlin
-    id("org.jetbrains.kotlin.plugin.spring") version "1.9.22"
+    kotlin("plugin.spring") version "1.9.25"
+    kotlin("jvm") version "1.9.25"
     id("org.springframework.boot") version "3.2.3"
     id("io.spring.dependency-management") version "1.1.4"
-    kotlin("jvm") version "1.9.22"
 }
 
 group = "com.kazekagyee"
@@ -17,6 +17,8 @@ java {
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://jitpack.io") }
+    maven { url = uri("https://repo.spring.io/milestone") }
 }
 
 dependencies {
