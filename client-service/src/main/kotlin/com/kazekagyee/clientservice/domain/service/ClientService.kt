@@ -10,7 +10,7 @@ class ClientService(
 
     fun startSequence(n: Int) {
         restTemplate.getForObject(
-            "http://localhost:8083/first-service/$n",
+            "http://first-service:8083/first-service/$n",
             Void::class.java
         )
     }
